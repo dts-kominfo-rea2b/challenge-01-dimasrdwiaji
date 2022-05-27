@@ -4,7 +4,7 @@
 
 // Declare unique favorite color with set
 // First user
-let firstUserColor = new Set([
+const firstUserColor = new Set([
     'Yellow',
     'Pink',
     'White',
@@ -12,14 +12,18 @@ let firstUserColor = new Set([
 ]);
 
 // Second user
-let secondUserColor = new Set([
+const secondUserColor = new Set([
     'Blue',
     'Black',
     'Grey'
 ]);
 
+// Convert set to array so github autograding can count length
+const firstUserColorArr = Array.from(firstUserColor);
+const secondUserColorArr = Array.from(secondUserColor);
+
 // Declare whether user have pet or not using map
-let isHavePet = new Map();
+const isHavePet = new Map();
 isHavePet.set('Monica', 'Yes');
 isHavePet.set('Wendy', 'No');
 
@@ -67,7 +71,7 @@ const secondUserEdu = [
 
 // Declare unique restaurant with set
 // First user
-let firstUserRestaurant = new Set([
+const firstUserRestaurant = new Set([
     'Bento',
     'Sushi',
     'Pancake',
@@ -82,7 +86,7 @@ let firstUserRestaurant = new Set([
 ]);
 
 // Second user
-let secondUserRestaurant = new Set([
+const secondUserRestaurant = new Set([
     'Tempura',
     'Bento',
     'Sushi',
@@ -94,15 +98,21 @@ let secondUserRestaurant = new Set([
     'Eggy'
 ])
 
+// Convert set to array so github autograding can count length
+const firstUserRestaurantArr = Array.from(firstUserRestaurant);
+const secondUserRestaurantArr = Array.from(secondUserRestaurant);
+
+
+// Declare firstUser and secondUser
 const firstUser = {
     name: 'Monica',
     gender: 'Female',
     age: 17,
     email: 'monica@dingdong.com',
-    favoriteColor: firstUserColor,
+    favoriteColor: firstUserColorArr,
     isHavePet: isHavePet.get('Monica'),
     education: firstUserEdu,
-    favoriteRestaurant: firstUserRestaurant
+    favoriteRestaurant: firstUserRestaurantArr
 };
 
 const secondUser = {
@@ -110,10 +120,10 @@ const secondUser = {
     gender: 'Male',
     age: 23,
     email: 'wendy@dingdong.com',
-    favoriteColor: secondUserColor,
+    favoriteColor: secondUserColorArr,
     isHavePet: isHavePet.get('Wendy'),
     education: secondUserEdu,
-    favoriteRestaurant: secondUserRestaurant
+    favoriteRestaurant: secondUserRestaurantArr
 };
 
 
@@ -131,3 +141,6 @@ main();
 module.exports = {
     users
 };
+
+let tes = Array.from(firstUserRestaurant);
+console.log(tes.length);
